@@ -1,6 +1,6 @@
 import { CssBaseline } from "@mui/material";
 import styled from "@emotion/styled"
-import { withRouter } from 'next/router'
+import { useRouter } from 'next/router'
 
 
 const Container = styled.div`
@@ -9,9 +9,14 @@ const Container = styled.div`
   padding-top: 1rem,
 `;
 
-export default withRouter(({ router }) => (
+export default function Player() {
+  const router = useRouter()
+
+  return(
     <Container>
-        <CssBaseline />
-            hello there {router.query.id}
+      <CssBaseline />
+        hello there {router.query.name}
     </Container>
-));
+  )
+
+};

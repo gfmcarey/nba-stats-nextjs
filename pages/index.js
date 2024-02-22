@@ -24,7 +24,7 @@ const TwoColumnLayout = styled.div`
 
 const Container = styled.div`
   margin: auto;
-  width: 1000px;
+  width: 80%;
   padding-top: 1rem;
 `;
 
