@@ -15,7 +15,7 @@ export default function Player() {
   return(
     <Container>
       <CssBaseline />
-        hello there {router.query.name}
+        hello there {router.query.id}
     </Container>
   )
 

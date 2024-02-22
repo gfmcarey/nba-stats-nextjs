@@ -5,7 +5,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { CssBaseline } from "@mui/material";
-import { createStore } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import { Provider, useSelector, useDispatch } from 'react-redux'
 
 import PlayerInfo from "../components/PlayerInfo";
@@ -54,7 +54,9 @@ const playerReducer = (state = {
   }
 }
 
-const store = createStore(playerReducer)
+const store = configureStore({
+  reducer: playerReducer
+})
 
 
 function Home() {
