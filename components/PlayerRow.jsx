@@ -14,7 +14,10 @@ const PlayerRow = ({ player, onClick }) => (
   
   <tr key={player.id}>
     <Row>
-      <Link href={`/player/${player.id}`}>
+      <Link href={{
+        pathname: `/player/${player.id}`,
+        query: player,
+      }}>
         {player.name}
       </Link>
     </Row>
